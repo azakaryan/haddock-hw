@@ -1,0 +1,26 @@
+[
+    {
+      "number": 12,
+      "name": "Spring rolls",
+      "price": {
+        "amount": 4.5,
+        "currency": "€"
+      }
+    },
+    {
+      "number": 21,
+      "name": "Fried rice with pork",
+      "price": {
+        "amount": 6,
+        "currency": "€"
+      }
+    },
+    {
+      "number": 37,
+      "name": "Chicken with almond sauce",
+      "price": {
+        "amount": 6.5,
+        "currency": "€"
+      }
+    }
+]

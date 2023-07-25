@@ -1,0 +1,69 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: myapp
+  description: Haddock app
+basePath: /api/v1
+tags:
+  - name: Products
+    description: Products endpoints
+  - name: Order
+    description: Order endpoints
+  - name: Specification
+    description: The swagger API specification
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  OrderBody:
+    type: array
+    items:
+      type: object
+      title: order
+      required:
+        - id
+        - numberOfItems
+      properties:
+        id:
+          type: number
+        numberOfItems:
+          type: number
+
+paths:
+  /products:
+    get:
+      tags:
+        - Products
+      description: Fetch all products
+      responses:
+        200:
+          description: Returns all products
+
+  /order:
+    post:
+      tags:
+        - Order
+      description: Create a new order
+      parameters:
+        - name: order
+          in: body
+          description: an order
+          required: true
+          schema: 
+            $ref: "#/definitions/OrderBody"
+      responses:
+        201:
+          description: Returns total amount
+        400:
+          description: Bad request
+
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification

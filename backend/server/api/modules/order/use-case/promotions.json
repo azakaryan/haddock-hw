@@ -1,0 +1,19 @@
+[
+    {
+        "type": "TWO_FOR_ONE",
+        "name": "2 for 1",
+        "priority": 1,
+        "data": {
+            "productsIds": [12]
+        }
+    },
+    {
+        "type": "SPEND_X_TO_SAVE_Y",
+        "name": "Spend X to save Y",
+        "priority": 2,
+        "data": {
+            "minAmountToApplyPromotion": 20,
+            "discount": 5
+        }
+    }
+]
